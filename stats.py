@@ -44,6 +44,7 @@ def statistical_adjustments(experiments: Dict):
 def cohen_d(d1: List, d2: List) -> float:
     """
     Calculates Cohen's d for two sets of independent samples.
+    -> Reference: https://machinelearningmastery.com/effect-size-measures-in-python/
 
     Cohen’s d measures the difference between the mean from two Gaussian-distributed variables.
     It is a standard score that summarizes the difference in terms of the number of standard deviations.
@@ -120,6 +121,10 @@ def anova(data: pd.DataFrame, vars: Tuple):
     values for that group. A residual is positive when the corresponding value is greater than the sample mean, and is
     negative when the value is less than the sample mean. Residuals represent the portion of the variability unexplained
     by the model.
+
+    Types of ANOVA: https://mcfromnz.wordpress.com/2011/03/02/anova-type-iiiiii-ss-explained/
+
+    Two-way ANOVA: https://www.statology.org/two-way-anova-python/
 
     @param data: a dataframe including the data for the analysis
     @param vars: target variables of the dataframe for an R-like formula defining the terms of the analysis

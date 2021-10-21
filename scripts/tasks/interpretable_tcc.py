@@ -2,7 +2,7 @@ import os
 
 import pandas as pd
 
-from stats import anova, effect_size, statistical_adjustments
+from functional.stats import anova, effect_size, statistical_adjustments
 
 
 def confidence_reg():

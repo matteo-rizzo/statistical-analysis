@@ -8,6 +8,8 @@ from statsmodels.sandbox.stats.multicomp import MultiComparison
 from statsmodels.stats.anova import anova_lm
 from statsmodels.stats.multitest import multipletests
 
+from utils import SEPARATOR
+
 
 def statistical_adjustments(experiments: Dict):
     """
@@ -31,14 +33,14 @@ def statistical_adjustments(experiments: Dict):
     }
     """
     print("\n *** Benjamini–Hochberg Analysis *** ")
-    print("\n---------------------------------------")
+    print("\n{}\n".format(SEPARATOR["dashes"]))
     for exp_id, pvals in experiments.items():
         reject, pvals_corrected, _, _ = multipletests(pvals, alpha=0.05, method='fdr_bh')
         print("\n Results for {}:".format(exp_id))
         print("\t * p-values (input): ....... {}".format(pvals))
         print("\t * p-values (corrected): ... {}".format(pvals_corrected))
         print("\t * Reject: ................. {}".format(reject))
-    print("\n---------------------------------------\n")
+    print("\n{}\n".format(SEPARATOR["dashes"]))
 
 
 def cohen_d(d1: List, d2: List) -> float:

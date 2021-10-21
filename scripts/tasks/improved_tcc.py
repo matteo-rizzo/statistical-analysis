@@ -2,7 +2,7 @@ import os
 
 import pandas as pd
 
-from stats import statistical_adjustments, effect_size, anova
+from functional.stats import statistical_adjustments, effect_size, anova
 
 
 def main():

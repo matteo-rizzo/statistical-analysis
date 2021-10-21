@@ -1,4 +1,4 @@
-from stats import effect_size
+from functional.stats import effect_size
 
 
 def main():

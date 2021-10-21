@@ -1,2 +1,2 @@
-numpy~=1.20.1
-statsmodels~=0.12.2
+numpy==1.21.3
+statsmodels==0.13.0
